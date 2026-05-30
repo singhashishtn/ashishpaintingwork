@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashish Painting Work — Premium Home Painting, Mumbai & Navi Mumbai</title>
+<meta name="description" content="Mumbai's trusted premium home painting service. Serving Navi Mumbai, Thane & beyond. Quality finishes, on-time delivery, zero compromise.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F7F3EE;
+    --warm-white: #FDFAF6;
+    --clay: #C4855A;
+    --clay-light: #D9A07A;
+    --clay-dark: #8C5230;
+    --charcoal: #1E1A17;
+    --mid: #5C4A3A;
+    --soft: #A89080;
+    --border: rgba(196,133,90,0.2);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--charcoal);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.2rem 4rem;
+    background: rgba(247,243,238,0.88);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    transition: padding 0.3s;
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; font-weight: 600;
+    letter-spacing: 0.04em; color: var(--charcoal);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--clay); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase;
+    text-decoration: none; color: var(--mid);
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--clay); }
+  .nav-cta {
+    background: var(--clay); color: white;
+    padding: 0.55rem 1.4rem; border-radius: 2px;
+    font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+    text-decoration: none; transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--clay-dark); color: white; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: grid; grid-template-columns: 1fr 1fr;
+    padding-top: 80px;
+    overflow: hidden;
+  }
+  .hero-left {
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 5rem 4rem 5rem 5rem;
+    position: relative;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--clay); margin-bottom: 1.5rem;
+  }
+  .hero-badge::before {
+    content: ''; width: 28px; height: 1px; background: var(--clay);
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 5vw, 5.2rem);
+    font-weight: 300; line-height: 1.08;
+    color: var(--charcoal); margin-bottom: 1.6rem;
+  }
+  .hero-title em { font-style: italic; color: var(--clay); }
+  .hero-subtitle {
+    font-size: 1rem; line-height: 1.7; color: var(--mid);
+    max-width: 400px; margin-bottom: 2.5rem;
+    font-weight: 300;
+  }
+  .hero-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--charcoal); color: var(--cream);
+    padding: 0.9rem 2.2rem; border-radius: 2px;
+    font-size: 0.85rem; letter-spacing: 0.06em;
+    text-decoration: none; transition: background 0.2s, transform 0.2s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--clay); transform: translateY(-1px); }
+  .btn-secondary {
+    color: var(--mid); font-size: 0.85rem;
+    text-decoration: none; display: flex; align-items: center; gap: 0.4rem;
+    border-bottom: 1px solid var(--border); padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .btn-secondary:hover { color: var(--clay); border-color: var(--clay); }
+
+  .hero-stats {
+    display: flex; gap: 2.5rem; margin-top: 3.5rem;
+    padding-top: 2rem; border-top: 1px solid var(--border);
+  }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem; font-weight: 600; color: var(--charcoal);
+    line-height: 1;
+  }
+  .stat-num span { font-size: 1.2rem; color: var(--clay); }
+  .stat-label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--soft); margin-top: 0.3rem; }
+
+  .hero-right {
+    position: relative; overflow: hidden;
+    background: var(--charcoal);
+  }
+  .hero-visual {
+    width: 100%; height: 100%;
+    background: linear-gradient(135deg, #2C1F14 0%, #4A2E1A 40%, #C4855A 100%);
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .hero-visual::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  .hero-img-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, transparent 50%, rgba(30,26,23,0.6) 100%);
+  }
+  .hero-img-text {
+    position: absolute; bottom: 2.5rem; left: 2.5rem; right: 2.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem; font-style: italic; color: rgba(255,255,255,0.7);
+    line-height: 1.6;
+  }
+  /* Paint stroke decorative SVG */
+  .brush-stroke {
+    width: 320px; height: 320px; opacity: 0.15;
+  }
+
+  /* ── TRUST BAR ── */
+  .trust-bar {
+    background: var(--charcoal);
+    padding: 1.4rem 5rem;
+    display: flex; align-items: center; justify-content: center;
+    gap: 3rem; flex-wrap: wrap;
+  }
+  .trust-item {
+    font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: rgba(255,255,255,0.5); display: flex; align-items: center; gap: 0.6rem;
+  }
+  .trust-item strong { color: rgba(255,255,255,0.85); }
+  .trust-divider { width: 1px; height: 20px; background: rgba(255,255,255,0.15); }
+
+  /* ── SECTION SHARED ── */
+  section { padding: 6rem 5rem; }
+  .section-eyebrow {
+    font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--clay); margin-bottom: 1rem;
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+  .section-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--clay); }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3.5vw, 3.2rem);
+    font-weight: 300; line-height: 1.2; color: var(--charcoal);
+    margin-bottom: 1.2rem;
+  }
+  .section-title em { font-style: italic; color: var(--clay); }
+  .section-body { font-size: 0.95rem; line-height: 1.8; color: var(--mid); max-width: 520px; font-weight: 300; }
+
+  /* ── SERVICES ── */
+  #services { background: var(--warm-white); }
+  .services-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5px; margin-top: 3.5rem;
+    border: 1.5px solid var(--border); border-radius: 4px; overflow: hidden;
+  }
+  .service-card {
+    background: var(--warm-white); padding: 2.5rem 2rem;
+    border-right: 1.5px solid var(--border);
+    transition: background 0.3s;
+    position: relative; overflow: hidden;
+  }
+  .service-card:last-child { border-right: none; }
+  .service-card::before {
+    content: ''; position: absolute; bottom: 0; left: 0;
+    width: 0; height: 2px; background: var(--clay);
+    transition: width 0.4s;
+  }
+  .service-card:hover { background: #FDF5EE; }
+  .service-card:hover::before { width: 100%; }
+  .service-icon {
+    font-size: 1.6rem; margin-bottom: 1.2rem;
+  }
+  .service-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; font-weight: 600; color: var(--charcoal);
+    margin-bottom: 0.7rem;
+  }
+  .service-desc {
+    font-size: 0.85rem; line-height: 1.7; color: var(--mid); font-weight: 300;
+  }
+  .service-tags {
+    display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1.2rem;
+  }
+  .tag {
+    font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 0.25rem 0.6rem; border: 1px solid var(--border);
+    color: var(--soft); border-radius: 2px;
+  }
+
+  /* ── WHY US ── */
+  #why {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6rem;
+    align-items: center;
+  }
+  .why-visual {
+    background: var(--charcoal); border-radius: 4px;
+    aspect-ratio: 4/5; position: relative; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .why-visual-inner {
+    width: 100%; height: 100%;
+    background: linear-gradient(160deg, #3D2414 0%, #7A4020 55%, var(--clay-light) 100%);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .why-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem; font-style: italic; font-weight: 300;
+    color: rgba(255,255,255,0.9); text-align: center; padding: 2rem;
+    line-height: 1.5;
+  }
+  .why-quote cite {
+    display: block; margin-top: 1.2rem;
+    font-size: 0.75rem; font-style: normal;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--clay-light); font-family: 'DM Sans', sans-serif;
+  }
+  .why-points { display: flex; flex-direction: column; gap: 2rem; margin-top: 2.5rem; }
+  .why-point { display: flex; gap: 1.2rem; align-items: flex-start; }
+  .why-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem; font-weight: 600; color: var(--border);
+    line-height: 1; flex-shrink: 0; width: 2rem;
+  }
+  .why-point-title {
+    font-size: 0.95rem; font-weight: 500; color: var(--charcoal); margin-bottom: 0.3rem;
+  }
+  .why-point-desc { font-size: 0.85rem; color: var(--mid); line-height: 1.6; font-weight: 300; }
+
+  /* ── PROCESS ── */
+  #process { background: var(--charcoal); color: var(--cream); }
+  #process .section-title { color: var(--cream); }
+  #process .section-body { color: rgba(247,243,238,0.6); }
+  .process-steps {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 2px; margin-top: 3.5rem;
+  }
+  .process-step {
+    padding: 2.5rem 1.8rem;
+    border-right: 1px solid rgba(247,243,238,0.1);
+    position: relative;
+  }
+  .process-step:last-child { border-right: none; }
+  .step-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem; font-weight: 600; line-height: 1;
+    color: rgba(196,133,90,0.2); margin-bottom: 1rem;
+  }
+  .step-title {
+    font-size: 0.9rem; font-weight: 500; color: var(--cream);
+    margin-bottom: 0.6rem; letter-spacing: 0.04em;
+  }
+  .step-desc { font-size: 0.82rem; color: rgba(247,243,238,0.45); line-height: 1.7; font-weight: 300; }
+
+  /* ── TESTIMONIALS ── */
+  #testimonials { background: var(--warm-white); }
+  .testimonials-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem; margin-top: 3.5rem;
+  }
+  .testimonial-card {
+    background: var(--cream); border: 1px solid var(--border);
+    border-radius: 4px; padding: 2rem;
+    transition: box-shadow 0.3s;
+  }
+  .testimonial-card:hover { box-shadow: 0 8px 32px rgba(196,133,90,0.12); }
+  .stars { color: var(--clay); font-size: 0.85rem; margin-bottom: 1rem; letter-spacing: 0.1em; }
+  .testimonial-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-style: italic; font-weight: 300;
+    line-height: 1.65; color: var(--charcoal); margin-bottom: 1.5rem;
+  }
+  .testimonial-author { font-size: 0.8rem; font-weight: 500; color: var(--mid); }
+  .testimonial-location { font-size: 0.72rem; color: var(--soft); margin-top: 0.15rem; letter-spacing: 0.06em; }
+
+  /* ── SERVICE AREAS ── */
+  #areas { background: var(--cream); }
+  .areas-grid {
+    display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 2.5rem;
+  }
+  .area-chip {
+    padding: 0.5rem 1.2rem;
+    border: 1px solid var(--border); border-radius: 100px;
+    font-size: 0.82rem; color: var(--mid);
+    transition: all 0.2s;
+  }
+  .area-chip:hover { border-color: var(--clay); color: var(--clay); background: rgba(196,133,90,0.05); }
+  .area-chip.primary {
+    background: var(--clay); color: white; border-color: var(--clay);
+  }
+
+  /* ── CTA SECTION ── */
+  #contact {
+    background: linear-gradient(135deg, #1E1A17 0%, #3D2414 100%);
+    text-align: center; padding: 7rem 5rem;
+  }
+  #contact .section-eyebrow { justify-content: center; }
+  #contact .section-eyebrow::before { display: none; }
+  #contact .section-title { color: var(--cream); text-align: center; margin: 0 auto 1rem; }
+  #contact .section-body { color: rgba(247,243,238,0.55); text-align: center; margin: 0 auto 3rem; }
+  .contact-options {
+    display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+    margin-bottom: 3rem;
+  }
+  .contact-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 4px; padding: 1.5rem 2rem;
+    text-decoration: none; color: var(--cream);
+    transition: background 0.2s, border-color 0.2s;
+    text-align: center; min-width: 200px;
+  }
+  .contact-card:hover { background: rgba(196,133,90,0.15); border-color: var(--clay); }
+  .contact-card-icon { font-size: 1.4rem; margin-bottom: 0.6rem; }
+  .contact-card-label { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 0.3rem; }
+  .contact-card-value { font-size: 0.95rem; font-weight: 400; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--charcoal); padding: 2rem 5rem;
+    display: flex; justify-content: space-between; align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.06); flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; color: rgba(255,255,255,0.6);
+  }
+  .footer-logo span { color: var(--clay); }
+  .footer-copy { font-size: 0.72rem; color: rgba(255,255,255,0.25); letter-spacing: 0.06em; }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { font-size: 0.72rem; color: rgba(255,255,255,0.3); text-decoration: none; letter-spacing: 0.06em; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--clay); }
+
+  /* ── WHATSAPP FLOAT ── */
+  .whatsapp-float {
+    position: fixed; bottom: 2rem; right: 2rem; z-index: 200;
+    background: #25D366; color: white;
+    width: 56px; height: 56px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem; text-decoration: none;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 28px rgba(37,211,102,0.55);
+  }
+
+  /* ── ANIMATIONS ── */
+  .fade-up {
+    opacity: 0; transform: translateY(24px);
+    animation: fadeUp 0.7s ease forwards;
+  }
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .delay-1 { animation-delay: 0.15s; }
+  .delay-2 { animation-delay: 0.3s; }
+  .delay-3 { animation-delay: 0.45s; }
+  .delay-4 { animation-delay: 0.6s; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-right { height: 300px; }
+    .hero-left { padding: 3rem 1.5rem; }
+    section { padding: 4rem 1.5rem; }
+    .services-grid { grid-template-columns: 1fr; }
+    .service-card { border-right: none; border-bottom: 1.5px solid var(--border); }
+    #why { grid-template-columns: 1fr; gap: 2.5rem; }
+    .process-steps { grid-template-columns: 1fr 1fr; }
+    .process-step { border-bottom: 1px solid rgba(247,243,238,0.1); }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; text-align: center; padding: 2rem 1.5rem; }
+    #contact { padding: 4rem 1.5rem; }
+    .trust-bar { padding: 1.2rem 1.5rem; gap: 1.2rem; }
+    .trust-divider { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Ashish <span>Painting</span> Work</a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+  </ul>
+  <a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%27m%20interested%20in%20a%20painting%20quote" class="nav-cta" target="_blank">Get Free Quote</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-badge fade-up">Mumbai's Premium Painting Specialists</div>
+    <h1 class="hero-title fade-up delay-1">
+      Every wall<br>tells <em>your</em><br>story.
+    </h1>
+    <p class="hero-subtitle fade-up delay-2">
+      Trusted by 200+ homeowners across Mumbai & Navi Mumbai. Precision finishing, premium materials, and a team that treats your home like their own.
+    </p>
+    <div class="hero-actions fade-up delay-3">
+      <a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%27d%20like%20a%20free%20quote" class="btn-primary" target="_blank">Get Free Quote on WhatsApp</a>
+      <a href="#services" class="btn-secondary">See Our Work ↓</a>
+    </div>
+    <div class="hero-stats fade-up delay-4">
+      <div>
+        <div class="stat-num">200<span>+</span></div>
+        <div class="stat-label">Happy Homes</div>
+      </div>
+      <div>
+        <div class="stat-num">10<span>+</span></div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div>
+        <div class="stat-num">100<span>%</span></div>
+        <div class="stat-label">Satisfaction Promise</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-visual">
+      <svg class="brush-stroke" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 100 Q60 20 100 60 Q140 100 180 40" stroke="white" stroke-width="6" stroke-linecap="round" fill="none"/>
+        <path d="M30 140 Q80 80 120 100 Q160 120 190 80" stroke="white" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.5"/>
+        <circle cx="100" cy="100" r="60" stroke="white" stroke-width="1" opacity="0.1"/>
+        <circle cx="100" cy="100" r="40" stroke="white" stroke-width="0.5" opacity="0.08"/>
+      </svg>
+      <div class="hero-img-overlay"></div>
+      <div class="hero-img-text">
+        "We don't just paint walls — we craft the feeling of home."
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><strong>Asian Paints</strong> Authorised</div>
+  <div class="trust-divider"></div>
+  <div class="trust-item"><strong>Berger</strong> Certified</div>
+  <div class="trust-divider"></div>
+  <div class="trust-item">Serving Mumbai since <strong>2014</strong></div>
+  <div class="trust-divider"></div>
+  <div class="trust-item"><strong>Zero</strong> Hidden Charges</div>
+  <div class="trust-divider"></div>
+  <div class="trust-item">Site Clean-up <strong>Included</strong></div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-eyebrow">What We Do</div>
+  <h2 class="section-title">Painting solutions for <em>every</em> need</h2>
+  <p class="section-body">From single rooms to full societies — we bring the same care, precision and quality to every project.</p>
+
+  <div class="services-grid">
+    <a href="interior-painting.html" class="service-card" style="text-decoration:none">
+      <div class="service-icon">🏠</div>
+      <div class="service-name">Interior Painting</div>
+      <p class="service-desc">Complete interior painting with proper wall prep, putty work, primer, and your choice of finish — matte, silk, or sheen.</p>
+      <div class="service-tags">
+        <span class="tag">Bedrooms</span><span class="tag">Living Rooms</span><span class="tag">Kitchen</span><span class="tag">Kids' Rooms</span>
+      </div>
+      <div style="margin-top:1rem;font-size:0.78rem;color:var(--clay);letter-spacing:0.06em">See Our Work →</div>
+    </a>
+    <a href="exterior-painting.html" class="service-card" style="text-decoration:none">
+      <div class="service-icon">🏢</div>
+      <div class="service-name">Exterior Painting</div>
+      <p class="service-desc">Weather-resistant exterior coats that protect against Mumbai's monsoons. Scaffolding, surface prep, and multi-coat application included.</p>
+      <div class="service-tags">
+        <span class="tag">Buildings</span><span class="tag">Bungalows</span><span class="tag">Societies</span>
+      </div>
+      <div style="margin-top:1rem;font-size:0.78rem;color:var(--clay);letter-spacing:0.06em">See Our Work →</div>
+    </a>
+    <a href="texture-decorative.html" class="service-card" style="text-decoration:none">
+      <div class="service-icon">✨</div>
+      <div class="service-name">Texture & Decorative</div>
+      <p class="service-desc">Sand texture, Venetian plaster, stencil art, and designer finishes that add depth and character to your walls.</p>
+      <div class="service-tags">
+        <span class="tag">Texture Paint</span><span class="tag">Venetian Plaster</span><span class="tag">Stencil Work</span>
+      </div>
+      <div style="margin-top:1rem;font-size:0.78rem;color:var(--clay);letter-spacing:0.06em">See Our Work →</div>
+    </a>
+    <a href="new-construction.html" class="service-card" style="text-decoration:none">
+      <div class="service-icon">🏗️</div>
+      <div class="service-name">New Construction</div>
+      <p class="service-desc">Full-cycle painting for new builds — from bare brick to beautiful. Coordinated with builders and contractors for on-time delivery.</p>
+      <div class="service-tags">
+        <span class="tag">Builders</span><span class="tag">New Flats</span><span class="tag">Villas</span>
+      </div>
+      <div style="margin-top:1rem;font-size:0.78rem;color:var(--clay);letter-spacing:0.06em">See Our Work →</div>
+    </a>
+    <a href="repainting-touchups.html" class="service-card" style="text-decoration:none">
+      <div class="service-icon">🔄</div>
+      <div class="service-name">Repainting & Touch-ups</div>
+      <p class="service-desc">Freshen up your existing home. We assess walls, repair cracks, and bring your space back to life — quickly and cleanly.</p>
+      <div class="service-tags">
+        <span class="tag">Quick Refresh</span><span class="tag">Crack Repair</span><span class="tag">Annual Maintenance</span>
+      </div>
+      <div style="margin-top:1rem;font-size:0.78rem;color:var(--clay);letter-spacing:0.06em">See Our Work →</div>
+    </a>
+    <a href="society-contracts.html" class="service-card" style="text-decoration:none">
+      <div class="service-icon">🤝</div>
+      <div class="service-name">Housing Society Contracts</div>
+      <p class="service-desc">Transparent AMC contracts and bulk pricing for housing societies. We become your long-term maintenance partner.</p>
+      <div class="service-tags">
+        <span class="tag">AMC</span><span class="tag">Bulk Projects</span><span class="tag">Society Managers</span>
+      </div>
+      <div style="margin-top:1rem;font-size:0.78rem;color:var(--clay);letter-spacing:0.06em">See Our Work →</div>
+    </a>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="why-visual">
+    <div class="why-visual-inner">
+      <div class="why-quote">
+        "Your home deserves more than just a coat of paint — it deserves a craftsman who cares."
+        <cite>— Ashish, Founder</cite>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="section-eyebrow">Why Choose Us</div>
+    <h2 class="section-title">The <em>Ashish</em> difference</h2>
+    <p class="section-body">We've earned every referral the old-fashioned way — by doing exceptional work, every single time.</p>
+
+    <div class="why-points">
+      <div class="why-point">
+        <div class="why-number">01</div>
+        <div>
+          <div class="why-point-title">Transparent, upfront pricing</div>
+          <p class="why-point-desc">Get a detailed written quote before any work begins. No surprises, no hidden charges — what we quote is what you pay.</p>
+        </div>
+      </div>
+      <div class="why-point">
+        <div class="why-number">02</div>
+        <div>
+          <div class="why-point-title">On-time, every time</div>
+          <p class="why-point-desc">We respect your home and your schedule. Projects are completed within the committed timeline — always.</p>
+        </div>
+      </div>
+      <div class="why-point">
+        <div class="why-number">03</div>
+        <div>
+          <div class="why-point-title">Zero-mess guarantee</div>
+          <p class="why-point-desc">Full furniture protection, daily clean-up, and a final deep clean before we hand over your home. You shouldn't have to clean up after us.</p>
+        </div>
+      </div>
+      <div class="why-point">
+        <div class="why-number">04</div>
+        <div>
+          <div class="why-point-title">Only premium materials</div>
+          <p class="why-point-desc">We use only Asian Paints, Berger, and Dulux — sourced directly. No diluted or substandard materials, ever.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="section-eyebrow">How It Works</div>
+  <h2 class="section-title">Simple. <em>Seamless.</em> Stress-free.</h2>
+  <p class="section-body">Getting your home painted shouldn't be complicated. Here's exactly how we work.</p>
+
+  <div class="process-steps">
+    <div class="process-step">
+      <div class="step-num">01</div>
+      <div class="step-title">Free Site Visit</div>
+      <p class="step-desc">We visit your home, assess the walls, understand your vision, and give you an honest quote. No obligation.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">02</div>
+      <div class="step-title">Colour Consultation</div>
+      <p class="step-desc">Our team helps you pick the perfect colours and finishes — matching your taste, lighting, and furniture.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">03</div>
+      <div class="step-title">Prep & Protect</div>
+      <p class="step-desc">We cover all furniture, repair cracks, apply putty and primer. The foundation is everything.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">04</div>
+      <div class="step-title">Handover & Warranty</div>
+      <p class="step-desc">Final walk-through with you, touch-ups if needed, and a clean home delivered. With a service warranty.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-eyebrow">Client Stories</div>
+  <h2 class="section-title">What our clients <em>say</em></h2>
+
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"Ashish and his team transformed our 3BHK completely. The finish is flawless — and they were done in 4 days. Our friends couldn't believe it was the same flat."</p>
+      <div class="testimonial-author">Priya & Rohan Mehta</div>
+      <div class="testimonial-location">Kharghar, Navi Mumbai</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"Very professional team. They covered every piece of furniture, cleaned up perfectly, and even suggested a colour combination I wouldn't have thought of. Absolutely worth it."</p>
+      <div class="testimonial-author">Sanjay Kulkarni</div>
+      <div class="testimonial-location">Thane West</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"We've used Ashish for two homes now. The consistency in quality and the way they handle the whole project — from quote to clean-up — is why we keep coming back."</p>
+      <div class="testimonial-author">Kavita Desai</div>
+      <div class="testimonial-location">Vashi, Navi Mumbai</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section id="areas">
+  <div class="section-eyebrow">We Cover</div>
+  <h2 class="section-title">Serving all of <em>Mumbai</em> & beyond</h2>
+  <p class="section-body">Based in Navi Mumbai, we take up projects across the MMR region.</p>
+  <div class="areas-grid">
+    <span class="area-chip primary">Navi Mumbai</span>
+    <span class="area-chip primary">Thane</span>
+    <span class="area-chip primary">Mumbai</span>
+    <span class="area-chip">Kharghar</span>
+    <span class="area-chip">Vashi</span>
+    <span class="area-chip">Nerul</span>
+    <span class="area-chip">Panvel</span>
+    <span class="area-chip">Airoli</span>
+    <span class="area-chip">Belapur</span>
+    <span class="area-chip">Ghansoli</span>
+    <span class="area-chip">Thane West</span>
+    <span class="area-chip">Thane East</span>
+    <span class="area-chip">Mulund</span>
+    <span class="area-chip">Bhandup</span>
+    <span class="area-chip">Powai</span>
+    <span class="area-chip">Andheri</span>
+    <span class="area-chip">Borivali</span>
+  </div>
+</section>
+
+<!-- CTA / CONTACT -->
+<section id="contact">
+  <div class="section-eyebrow">Get In Touch</div>
+  <h2 class="section-title" style="max-width:600px;">Ready to transform <em>your</em> home?</h2>
+  <p class="section-body" style="max-width:480px;">Get a free, no-obligation quote within 24 hours. We visit your site, understand your requirements, and give you a transparent estimate.</p>
+
+  <div class="contact-options">
+    <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20Ashish%2C%20I%27d%20like%20a%20free%20quote%20for%20painting" class="contact-card" target="_blank">
+      <div class="contact-card-icon">💬</div>
+      <div class="contact-card-label">WhatsApp</div>
+      <div class="contact-card-value">Chat with us</div>
+    </a>
+    <a href="tel:+91XXXXXXXXXX" class="contact-card">
+      <div class="contact-card-icon">📞</div>
+      <div class="contact-card-label">Call Us</div>
+      <div class="contact-card-value">+91 XXXXX XXXXX</div>
+    </a>
+    <a href="mailto:ashishpaintingwork@gmail.com" class="contact-card">
+      <div class="contact-card-icon">✉️</div>
+      <div class="contact-card-label">Email</div>
+      <div class="contact-card-value">ashishpaintingwork@gmail.com</div>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Ashish <span>Painting</span> Work</div>
+  <div class="footer-copy">© 2025 Ashish Painting Work. Mumbai & Navi Mumbai.</div>
+  <div class="footer-links">
+    <a href="#services">Services</a>
+    <a href="#process">Process</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/91XXXXXXXXXX?text=Hi%20Ashish%2C%20I%27m%20interested%20in%20a%20painting%20quote" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">💬</a>
+
+</body>
+</html>
